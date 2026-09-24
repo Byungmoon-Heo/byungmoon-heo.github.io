@@ -1,0 +1,26 @@
+papers:
+  - title: "SEDRec: Semantic Entanglement for Generative Diffusion-based Sequential Recommendation"
+    authors: "<b>Byungmoon Heo</b>, Jaekwang Kim"
+    venue: "CIKM 2026"
+    selected: y
+
+  - title: "SGTRec: Integrating Spectral Encoding with Graph Neural Networks and Transformers for Recommendation"
+    authors: "Sichan Oh, <b>Byungmoon Heo</b>, Namjun Lee, Seonah Kim, Jaekwang Kim"
+    paper_pdf: "https://link.springer.com/content/pdf/10.1007/978-981-92-1300-9_17.pdf"
+    venue: "PAKDD 2026"
+    selected: y
+
+  - title: "FCRLLM: Aligning LLM with Collaborative Filtering for Long-tailed Sequential Recommendation"
+    authors: "<b>Byungmoon Heo</b>, Namjun Lee, Seonah Kim, Jaekwang Kim"
+    paper_pdf: "https://dl.acm.org/doi/pdf/10.1145/3774904.3792565"
+    presentation: "Oral"
+    code: "https://github.com/Byungmoon-Heo/FCRLLM"
+    venue: "WWW 2026"
+    selected: y
+
+  - title: "WaveRec: Is Wavelet Transform a Better Alternative to Fourier Transform for Sequential Recommendation?"
+    authors: "<b>Byungmoon Heo</b>, Jaekwang Kim"
+    paper_pdf: "https://dl.acm.org/doi/pdf/10.1145/3731120.3744621"
+    code: "https://github.com/Byungmoon-Heo/WaveRec"
+    venue: "ICTIR 2025"
+    selected: y

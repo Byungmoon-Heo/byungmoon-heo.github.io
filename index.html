@@ -1,0 +1,235 @@
+---
+layout: default
+title: Home
+---
+<!-- ========== BIO ========== -->
+<div class="docs-section" id="bio">
+  <h4>About</h4>
+<p>I am a PhD student at <a href="https://www.skku.edu/skku/index.do">Sungkyunkwan University</a>, advised by <a href="https://sites.google.com/view/skku-milab">Prof. Jaekwang Kim</a>. 
+  My research focuses on recommender systems, particularly sequential recommendation and personalized modeling.
+  I also work as an IT staff member at the Korea Sports Promotion Foundation.</p>
+<p>Please feel free to contact me via email for collaboration opportunities.</p>
+</div>
+
+<div class="docs-section" id="publications">
+  <h4>Publications</h4>
+{% comment %}
+  <ul class="tab-nav">
+    <li>
+      <div class="button active" data-ref="#papers-selected">Selected</div>
+    </li>
+    <li><div class="button" data-ref="#papers-all">All</div></li>
+  </ul>
+  <sup>*</sup> indicates equal contribution.
+{% endcomment %}
+  <div class="tab-content">    
+    <div class="tab-pane active" id="papers-selected">
+      {% assign selected_papers = site.data.publications.papers | where:
+      "selected", "y" %} {% for paper in selected_papers %}
+    
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b></p>
+        <p><sub>{{ paper.authors }}</sub></p>
+        <p><sub><i>{{ paper.venue }}</i></sub>
+        {% if paper.presentation %}
+        <span class="paper-presentation"><sub>({{ paper.presentation }})</sub></span>
+        {% endif %}
+        </p>
+        {% if paper.venue2 %}
+        <p><i>{{ paper.venue2 }}</i></p>
+        {% endif %}        
+        <div class="paper-buttons">
+          {% if paper.paper_pdf %}
+          <a class="button" href="{{ paper.paper_pdf }}" target="_blank"
+            >Paper</a
+          >
+          {% endif %} {% if paper.arxiv %}
+          <a class="button" href="{{ paper.arxiv }}" target="_blank">Arxiv</a>
+          {% endif %} {% if paper.slides %}
+          <a class="button" href="{{ paper.slides }}" target="_blank">Slides</a>
+          {% endif %} {% if paper.website %}
+          <a class="button" href="{{ paper.website | prepend: site.baseurl }}" target="_blank"
+            >Website</a
+          >
+          {% endif %} {% if paper.poster %}
+          <a class="button" href="{{ paper.poster }}" target="_blank">Poster</a>
+          {% endif %} {% if paper.video %}
+          <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %} {% if paper.code %}
+          <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %} {% if paper.data %}
+          <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+   </div>
+{% comment %} 
+    <div class="tab-pane" id="papers-all">
+      {% assign papers_by_year = site.data.publications.papers | group_by: "year" | sort: "name" | reverse %}
+      {% for year_group in papers_by_year %}
+      <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">{{ year_group.name }}</h5>
+      {% for paper in year_group.items %}
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b></p>
+        <p>{{ paper.authors }}</p>
+        <p><i>{{ paper.venue }}</i></p>
+        {% if paper.venue2 %}
+        <p><i>{{ paper.venue2 }}</i></p>
+        {% endif %}
+        <div class="paper-buttons">
+          {% if paper.paper_pdf %}
+          <a
+            class="button"
+            href="{{ paper.paper_pdf | prepend: site.baseurl }}"
+            target="_blank"
+            >Paper</a
+          >
+          {% endif %} {% if paper.arxiv %}
+          <a
+            class="button"
+            href="{{ paper.arxiv | prepend: site.baseurl }}"
+            target="_blank"
+            >Arxiv</a
+          >
+          {% endif %} {% if paper.slides %}
+          <a
+            class="button"
+            href="{{ paper.slides | prepend: site.baseurl }}"
+            target="_blank"
+            >Slides</a
+          >
+          {% endif %} {% if paper.website %}
+          <a
+            class="button"
+            href="{{ paper.website | prepend: site.baseurl }}"
+            target="_blank"
+            >Website</a
+          >
+          {% endif %} {% if paper.poster %}
+          <a
+            class="button"
+            href="{{ paper.poster | prepend: site.baseurl }}"
+            target="_blank"
+            >Poster</a
+          >
+          {% endif %} {% if paper.video %}
+          <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %} {% if paper.code %}
+          <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %} {% if paper.data %}
+          <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+      {% endfor %}
+    </div> 
+    {% endcomment %}
+  </div>
+</div>
+
+
+<!-- ========== Education ========== -->
+<div class="docs-section" id="education">
+  <h4>Education</h4>
+  <div class="paper">
+    <p class="title">
+      <b
+        >Sungkyunkwan University (SKKU)<b
+          style="float: right"
+          >Sep. 2024 - Present</b
+        ></b
+      >
+    </p>
+    <p>PhD Student in Applied Artificial Intelligence</p>
+  </div>
+  <div class="paper">
+    <p class="title">
+      <b
+        >Yonsei University<b
+          style="float: right"
+          >Mar. 2021 - Feb. 2023</b
+        ></b
+      >
+    </p>
+    <p>MS in Artificial Intelligence </p>
+  </div>
+</div>
+
+<!-- ========== Experience ========== -->
+<div class="docs-section" id="experience">
+  <h4>Experience</h4>
+  <div class="paper">
+    <p class="title">
+      <a href="https://www.dongyang.ac.kr/sites/dmue/index.do" target="_blank">Dongyang Mirae University </a
+      >(Seoul, South Korea)<b style="float: right">Sep. 2023 - Present</b>
+    </p>
+    <p>
+      <i>Adjunct Professor</i>
+      <span style="float: right">Mar. 2024 - Present</span>
+    </p>
+    <p>
+      <i>Lecturer</i>
+      <span style="float: right">Sep. 2023 - Feb. 2024</span>
+    </p>
+  </div>
+  <div class="paper">
+    <p class="title">
+      <a href="https://kspo.or.kr/english/main/main.do" target="_blank">KSPO </a>(Seoul, South
+      Korea)
+      <b style="float: right">Nov. 2016 - Present</b>
+    </p>
+    <p><i>IT staff</i></p>
+    <!--
+    <ul style="margin: 4px 0; padding-left: 15px; line-height: 1.55">
+      <li style="margin-bottom: 6px">
+        Led the development of AvaKit, the company's core product, securing
+        approx. USD 700K in funding.
+      </li>
+      <li style="margin-bottom: 6px">
+        <strong>1st place</strong> (of 876 teams),
+        <em>11th Chung Ju-Young Startup Competition</em> (largest private
+        startup contest in Korea).
+      </li>
+      <li>
+        <strong>2nd place</strong> (of 5,420 teams),
+        <em>K-Startup Grand Challenge 2022</em> (largest government startup
+        contest in Korea).
+      </li>
+    </ul> -->
+  </div>
+</div>
+
+<!-- ========== Academic Services ========== -->
+<div class="docs-section" id="services">
+  <h4>Academic Services</h4>
+  <div class="paper">
+    <p class="title"><b>Conference</b>, CIKM, SIGIR-AP</p>
+    <p class="title"><b>Journal</b>, ACM Transactions on Intelligent Systems and Technology</p>
+  </div>
+</div>
+
+
+<!-- ========== Honors & Awards ========== -->
+<div class="docs-section" id="honors">
+  <h4>Honors & Awards</h4>
+  <div class="paper">
+    <p class="title">
+      <b>Ministerial Commendation</b>, Ministry of Culture, Sports and Tourism<b
+        style="float: right"
+        >Dec. 2023</b
+      >
+    </p>
+  </div>
+  <div class="paper">
+    <p class="title">
+      <b>Chairman’s Commendation</b>, Korea Sports Promotion Foundation<b
+        style="float: right"
+        >Dec. 2020</b
+      >
+    </p>
+  </div>
+</div>  
+
+</div> 
